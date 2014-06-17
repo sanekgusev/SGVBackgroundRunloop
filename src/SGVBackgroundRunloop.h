@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SGBackgroundRunloop : NSObject
+@interface SGVBackgroundRunloop : NSObject
 
-+ (instancetype)runloop;
-
-- (void)performBlock:(void(^)())block;
+- (void)performBlock:(void(^)(void))block;
 
 @end

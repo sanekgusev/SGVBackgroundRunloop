@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BB7F95C117C7C450009A0FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7F95C017C7C450009A0FBE /* Foundation.framework */; };
-		BB7F95E917C7C4AA009A0FBE /* SGBackgroundRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F95E817C7C4AA009A0FBE /* SGBackgroundRunloop.m */; };
+		BB7F95E917C7C4AA009A0FBE /* SGVBackgroundRunloop.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F95E817C7C4AA009A0FBE /* SGVBackgroundRunloop.m */; };
+		EC99FC101950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC99FC0F1950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BB7F95BD17C7C450009A0FBE /* libSGBackgroundRunloop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGBackgroundRunloop.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7F95BD17C7C450009A0FBE /* libSGVBackgroundRunloop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGVBackgroundRunloop.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7F95C017C7C450009A0FBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BB7F95E717C7C4AA009A0FBE /* SGBackgroundRunloop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundRunloop.h; sourceTree = "<group>"; };
-		BB7F95E817C7C4AA009A0FBE /* SGBackgroundRunloop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundRunloop.m; sourceTree = "<group>"; };
+		BB7F95E717C7C4AA009A0FBE /* SGVBackgroundRunloop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGVBackgroundRunloop.h; sourceTree = "<group>"; };
+		BB7F95E817C7C4AA009A0FBE /* SGVBackgroundRunloop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGVBackgroundRunloop.m; sourceTree = "<group>"; };
+		EC99FC0E1950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGVBackgroundRunloopThreadHelper.h; sourceTree = "<group>"; };
+		EC99FC0F1950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGVBackgroundRunloopThreadHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +48,7 @@
 		BB7F95B417C7C450009A0FBE = {
 			isa = PBXGroup;
 			children = (
-				BB7F95C217C7C450009A0FBE /* SGBackgroundRunloop */,
+				BB7F95C217C7C450009A0FBE /* SGVBackgroundRunloop */,
 				BB7F95BF17C7C450009A0FBE /* Frameworks */,
 				BB7F95BE17C7C450009A0FBE /* Products */,
 			);
@@ -54,7 +57,7 @@
 		BB7F95BE17C7C450009A0FBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB7F95BD17C7C450009A0FBE /* libSGBackgroundRunloop.a */,
+				BB7F95BD17C7C450009A0FBE /* libSGVBackgroundRunloop.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,12 +70,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB7F95C217C7C450009A0FBE /* SGBackgroundRunloop */ = {
+		BB7F95C217C7C450009A0FBE /* SGVBackgroundRunloop */ = {
 			isa = PBXGroup;
 			children = (
 				BB7F95E617C7C4AA009A0FBE /* src */,
 				BB7F95C317C7C450009A0FBE /* Supporting Files */,
 			);
+			name = SGVBackgroundRunloop;
 			path = SGBackgroundRunloop;
 			sourceTree = "<group>";
 		};
@@ -86,8 +90,10 @@
 		BB7F95E617C7C4AA009A0FBE /* src */ = {
 			isa = PBXGroup;
 			children = (
-				BB7F95E717C7C4AA009A0FBE /* SGBackgroundRunloop.h */,
-				BB7F95E817C7C4AA009A0FBE /* SGBackgroundRunloop.m */,
+				BB7F95E717C7C4AA009A0FBE /* SGVBackgroundRunloop.h */,
+				BB7F95E817C7C4AA009A0FBE /* SGVBackgroundRunloop.m */,
+				EC99FC0E1950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.h */,
+				EC99FC0F1950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.m */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -95,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB7F95BC17C7C450009A0FBE /* SGBackgroundRunloop */ = {
+		BB7F95BC17C7C450009A0FBE /* SGVBackgroundRunloop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB7F95E017C7C450009A0FBE /* Build configuration list for PBXNativeTarget "SGBackgroundRunloop" */;
+			buildConfigurationList = BB7F95E017C7C450009A0FBE /* Build configuration list for PBXNativeTarget "SGVBackgroundRunloop" */;
 			buildPhases = (
 				BB7F95B917C7C450009A0FBE /* Sources */,
 				BB7F95BA17C7C450009A0FBE /* Frameworks */,
@@ -107,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = SGBackgroundRunloop;
+			name = SGVBackgroundRunloop;
 			productName = SGBackgroundRunloop;
-			productReference = BB7F95BD17C7C450009A0FBE /* libSGBackgroundRunloop.a */;
+			productReference = BB7F95BD17C7C450009A0FBE /* libSGVBackgroundRunloop.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +127,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = sanekgusev;
 			};
-			buildConfigurationList = BB7F95B817C7C450009A0FBE /* Build configuration list for PBXProject "SGBackgroundRunloop" */;
+			buildConfigurationList = BB7F95B817C7C450009A0FBE /* Build configuration list for PBXProject "SGVBackgroundRunloop" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -133,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB7F95BC17C7C450009A0FBE /* SGBackgroundRunloop */,
+				BB7F95BC17C7C450009A0FBE /* SGVBackgroundRunloop */,
 			);
 		};
 /* End PBXProject section */
@@ -143,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7F95E917C7C4AA009A0FBE /* SGBackgroundRunloop.m in Sources */,
+				EC99FC101950D1B300EC4661 /* SGVBackgroundRunloopThreadHelper.m in Sources */,
+				BB7F95E917C7C4AA009A0FBE /* SGVBackgroundRunloop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +228,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/SGBackgroundRunloop.dst;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SGVBackgroundRunloop;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -231,7 +238,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/SGBackgroundRunloop.dst;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SGVBackgroundRunloop;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -239,7 +246,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB7F95B817C7C450009A0FBE /* Build configuration list for PBXProject "SGBackgroundRunloop" */ = {
+		BB7F95B817C7C450009A0FBE /* Build configuration list for PBXProject "SGVBackgroundRunloop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB7F95DE17C7C450009A0FBE /* Debug */,
@@ -248,7 +255,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB7F95E017C7C450009A0FBE /* Build configuration list for PBXNativeTarget "SGBackgroundRunloop" */ = {
+		BB7F95E017C7C450009A0FBE /* Build configuration list for PBXNativeTarget "SGVBackgroundRunloop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB7F95E117C7C450009A0FBE /* Debug */,
